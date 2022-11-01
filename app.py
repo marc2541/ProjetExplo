@@ -87,5 +87,5 @@ def ajax_delete():
         conn.close()
         
         msg = 'Livre supprimé avec succès'
-        
+    
     return jsonify(msg) 
