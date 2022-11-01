@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Ajouter un nouveau livre {% endblock %}</h1>
+    <form method="post">
+        <p>
+            <label for="title">Titre</label>
+            <input type="text" name="title"
+                placeholder="Book title">
+            </input>
+        </p>
+
+        <p>
+            <label for="author">Auteur</label>
+            <input type="text" name="author"
+                placeholder="Book author">
+            </input>
+        </p>
+
+        <p>
+            <label for="pages_num">Nombre de pages</label>
+            <input type="number" name="pages_num"
+                placeholder="Number of pages">
+            </input>
+        </p>
+        <p>
+        <label for="review">Commentaire</label>
+        <br>
+        <textarea name="review"
+                placeholder="Review"
+                rows="15"
+                cols="60"
+                ></textarea>
+        </p>
+        <p>
+            <button type="submit">Envoyé</button>
+        </p>
+    </form>
+{% endblock %}
