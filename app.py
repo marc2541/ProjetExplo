@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for, redirect
+from flask import Flask, render_template, request, url_for, redirect, jsonify
 import psycopg2
 
 app = Flask(__name__)
@@ -36,7 +36,7 @@ def bibliotheque():
     conn = get_db_connection()
     cur = conn.cursor()
 
-    cur.execute('SELECT * FROM books;')
+    cur.execute('SELECT * FROM books ORDER BY id;')
     books = cur.fetchall()
 
     cur.close()
@@ -65,3 +65,27 @@ def create():
         return redirect(url_for('index'))
 
     return render_template('create.html')
+
+
+
+#
+#   AJAX FUNCTION SECTION
+#
+
+@app.route("/ajax_delete_book",methods=["POST","GET"])
+def ajax_delete():
+    conn = get_db_connection()
+    cur = conn.cursor()
+
+    if request.method == 'POST':
+        getid = request.form['string']
+
+        cur.execute('DELETE FROM books WHERE id = {0}'.format(getid))
+        conn.commit()
+
+        cur.close()
+        conn.close()
+        
+        msg = 'Livre supprimé avec succès'
+        
+    return jsonify(msg) 

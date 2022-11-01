@@ -30,19 +30,26 @@ cur.execute('CREATE TABLE books (id serial PRIMARY KEY,'
 
 cur.execute('INSERT INTO books (title, author, pages_num, review)'
             'VALUES (%s, %s, %s, %s)',
-            ('A Tale of Two Cities',
-             'Charles Dickens',
-             489,
-             'A great classic!')
+            ('Hello world',
+             'projet2',
+             150,
+             'Un classique!')
             )
-
 
 cur.execute('INSERT INTO books (title, author, pages_num, review)'
             'VALUES (%s, %s, %s, %s)',
-            ('Anna Karenina',
-             'Leo Tolstoy',
+            ('TempleOS',
+             'Monster energy drinks',
              864,
-             'Another great classic!')
+             'Un autre véritable classique!')
+            )
+
+cur.execute('INSERT INTO books (title, author, pages_num, review)'
+            'VALUES (%s, %s, %s, %s)',
+            ('Red had',
+             'Linus Torpille',
+             864,
+             'Le meilleur os pas possible')
             )
 
 conn.commit()

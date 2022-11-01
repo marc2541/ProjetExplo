@@ -2,19 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow" />
     <title>{% block title %} {% endblock %}- Projet2</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+    <script src="{{url_for('static', filename='js/jquery-3.6.1.js')}}" defer></script>
+    <script src="{{url_for('static', filename='js/function.js')}}" defer></script>
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
 <body>
     <nav>
         <a href="{{ url_for('index') }}">Projet2</a>
-        <!-- <a href="#">À propos</a> -->
         <a href="{{ url_for('bibliotheque') }}">Bibliothèque</a>
         <a href="{{ url_for('create') }}">Ajouter un livre</a>
         <a href="{{ url_for('creerCompte') }}">Créer un compte</a>
     </nav>
     <hr>
+    <div class='' id="displaymessage" style="display:none;width:100%;margin-top:10px;"></div>
     <div class="content">
         {% block content %} {% endblock %}
     </div>
