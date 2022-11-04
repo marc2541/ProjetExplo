@@ -31,7 +31,7 @@ cur.execute('CREATE TABLE books (id serial PRIMARY KEY,'
 cur.execute('INSERT INTO books (title, author, pages_num, review)'
             'VALUES (%s, %s, %s, %s)',
             ('Hello world',
-             'projet2',
+             'mr projet2',
              150,
              'Un classique!')
             )
@@ -48,7 +48,7 @@ cur.execute('INSERT INTO books (title, author, pages_num, review)'
             'VALUES (%s, %s, %s, %s)',
             ('Red had',
              'Linus Torpille',
-             864,
+             1,
              'Le meilleur os pas possible')
             )
 
