@@ -7,6 +7,8 @@ app = Flask(__name__)
 #
 #   DATABASE SECTION
 #
+
+# Retourne une connection vers la BD
 def get_db_connection():
     conn = psycopg2.connect(database="postgres", user="postgres", password="projet2SQL", host="mydbproj2.cemr0e3omd3i.us-east-2.rds.amazonaws.com", port="5432")
     
