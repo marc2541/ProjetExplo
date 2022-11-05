@@ -16,3 +16,8 @@ $(document).on("click", ".delete", function(){
         });
     }
 });
+
+/* Menu de nav pour la version mobile */
+function menuNavMobile() {
+    document.getElementById("nav-mobile").classList.toggle("hidden");
+}

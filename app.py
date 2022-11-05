@@ -3,6 +3,7 @@ import psycopg2
 
 app = Flask(__name__)
 
+
 #
 #   DATABASE SECTION
 #
@@ -22,6 +23,7 @@ def get_db_connection():
 @app.route("/")
 def index():
     return render_template('index.html')
+
 
 
 # Route : créer un compte
@@ -89,3 +91,6 @@ def ajax_delete():
         msg = 'Livre supprimé avec succès'
     
     return jsonify(msg) 
+
+if __name__ == "__main__":
+    app.run(debug=True)
