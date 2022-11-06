@@ -3,25 +3,24 @@
 {% block content %}
     <h1 class="text-center">{% block title %} Bibliothèque {% endblock %}</h1>
     <div class="accordion" id="accordionBibliotheque">
-    {% for book in books %}
-    <!-- Revoir avec Loïc pour changer les id de H2 et les reference comme headingOne et collapseOne -->
-        <div class="accordion-item" id="{{book[0]}}">
-            <h2 class="accordion-header" id="heading{{ book[0] }}">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ book[0] }}" aria-expanded="true" aria-controls="collapse{{ book[0] }}">
-                    #{{ book[0] }} - {{ book[1] }} PAR {{ book[2] }}
-                </button>
-            </h2>
-            <div id="collapse{{ book[0] }}" class="accordion-collapse collapse" aria-labelledby="heading{{ book[0] }}" data-bs-parent="#accordionBibliotheque">
-                <div class="accordion-body">
-                    
-                    <h4 class='review'>{{ book[4] }}</h4>
-                    <p class="fst-italic">({{ book[3] }} pages)</p>
-                    <p class="fst-italic">Ajouté {{ book[5] }}</p>
-                    <button id="{{ book[0] }}" class="delete btn btn-primary">Supprimer</button>
+        {% for book in books %}
+        
+            <div class="accordion-item" id="{{book[0]}}">
+                <h2 class="accordion-header" id="heading{{ book[0] }}">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ book[0] }}" aria-expanded="true" aria-controls="collapse{{ book[0] }}">
+                        #{{ book[0] }} - {{ book[1] }} PAR {{ book[2] }}
+                    </button>
+                </h2>
+                <div id="collapse{{ book[0] }}" class="accordion-collapse collapse" aria-labelledby="heading{{ book[0] }}" data-bs-parent="#accordionBibliotheque">
+                    <div class="accordion-body">
+                        <h4 class='review'>{{ book[4] }}</h4>
+                        <p class="fst-italic">({{ book[3] }} pages)</p>
+                        <p class="fst-italic">Ajouté {{ book[5] }}</p>
+                        <button id="{{ book[0] }}" class="delete btn btn-primary">Supprimer</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
     </div>
 
 {% endblock %}
