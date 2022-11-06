@@ -18,7 +18,7 @@ $(document).on("click", ".delete", function(){
     }
 });
 
-// Supprimer un livre sur le clic du bouton
+// Validation avec la soumission du formulaire
 $(document).on("click", ".submit", function(){
     // Déclaration des variables
     let error = false;
