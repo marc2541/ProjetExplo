@@ -66,7 +66,7 @@ def create():
         cur.close()
         conn.close()
 
-        return redirect(url_for('index'))
+        return redirect(url_for('bibliotheque'))
 
     return render_template('create.html')
 

@@ -2,6 +2,7 @@
 
 <p>Demo apps, coded in Python, w/ framework : Flask. PostgreSQL as the database.</p>
 
+```batch
 .
 └── flask_app
     └── project
@@ -16,3 +17,4 @@
             ├── login.html    # show the login form
             ├── profile.html  # show the profile page
             └── signup.html   # show the signup form
+```
