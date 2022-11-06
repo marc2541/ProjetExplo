@@ -1,65 +1,29 @@
+footer {
+    
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
 
+header {
+    margin-bottom: 25px;
+}
 
-.auto
-{
+.auto {
     margin: auto;
 }
 
-.flex-row
-{
-    display: flex;
-    flex-direction: row;
+a:hover {
+    background-color: rgb(42, 42, 42);
+	color: #fff;
 }
 
-.flex-column
-{
-    display: flex;
-    flex-direction: column;
+a.active {
+	background-color: rgb(42, 42, 42);
+	color: #fff;
 }
 
-.wrap
-{
-    flex-wrap: wrap;
+#boutonFormulair {
+    margin-top: 15px;
 }
-
-.input
-{
-    margin: 5pt 0pt;
-}
-
-.height-fit
-{
-    height: fit-content;
-}
-
-.height-fill
-{
-    height: fit-content;
-}
-
-.right
-{
-    margin-left: auto;
-    margin-right: 0;
-}
-
-
-
-
-.review {
-    margin-left: 50px;
-    font-size: 20px;
-}
-
-/*nav a {
-    color: #d64161;
-    font-size: 3em;
-    margin-left: 50px;
-    text-decoration: none;
-}*/
-
-/*.book {
-    padding: 20px;
-    margin: 10px;
-    background-color: #f7f4f4;
-}*/

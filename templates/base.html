@@ -13,16 +13,36 @@
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
     
 </head>
-<body class="col-9 auto">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="{{ url_for('index') }}">Accueil</a>
-        <a class="navbar-brand" href="{{ url_for('bibliotheque') }}">Bibliothèque</a>
-        <a class="navbar-brand" href="{{ url_for('create') }}">Ajouter un livre</a>
-        <!--<img id="navigation-mobile" onclick="menuNavMobile()" src="static/menu.png" alt="Img nav" />-->
-    </nav>
-    <div class='' id="displaymessage" style="display:none;width:100%;margin-top:10px;"></div>
-    <div class="content">
-        {% block content %} {% endblock %}
-    </div>
+
+<body class="">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav " >
+                        <a class="nav-link" href="{{ url_for('index') }}">Accueil</a></li>
+                        <a class="nav-link" href="{{ url_for('bibliotheque') }}">Bibliothèque</a></li>
+                        <a class="nav-link" href="{{ url_for('create') }}">Ajouter un livre</a></li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="col-9 auto">
+        <div class='' id="displaymessage" style="display:none;width:100%;margin-top:10px;"></div>
+        <div class="content">
+            {% block content %} {% endblock %}
+        </div>
+    </main>
+    <footer class="bg-dark">
+        <p class="text-muted py-5 text-center">Fait par : Manuel Turcotte, Loïc, JUSTE Marc</p>
+        <div class="container">
+    
+        </div>
+    </footer>
 </body>
+
 </html>
