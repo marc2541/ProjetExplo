@@ -2,19 +2,25 @@
 
 <p>Demo apps, coded in Python, w/ framework : Flask. PostgreSQL as the database.</p>
 
-```batch
+```bash
 .
 └── flask_app
-    └── project
-        ├── __init__.py       # setup the app
-        ├── auth.py           # the auth routes for the app
-        ├── db.sqlite         # the database
-        ├── main.py           # the non-auth routes for the app
-        ├── models.py         # the user model
+    └── PROJETEXPLO
+        ├── app.py              # Main controller
+        ├── init_db.py          # Create the database and insert lorem ipsum data
+        ├── models.py           # N'existe pas, aurait pu être utilisé
+        ├── static
+            ├── css
+                └── style.css        # Contient du css custom
+            ├── js
+                ├── function.js      # Contient des fonctions custom pour le site
+                └── jquery-3.6.1     # Librairie Javascript : jquery-3.6.1
+            ├── favicon.ico          # Logo onglet navigateur
+            └── menu.png
         └── templates
-            ├── base.html     # contains common layout and links
-            ├── index.html    # show the home page
-            ├── login.html    # show the login form
-            ├── profile.html  # show the profile page
-            └── signup.html   # show the signup form
+            ├── base.html            # Contains common layout, nav links, and meta data
+            ├── bibliotheque.html    # Index de la bibliothèque
+            ├── create.html          # Form pour ajouter un livre à la bibliothèque
+            └── index.html           # Page d'accueil
+            
 ```
