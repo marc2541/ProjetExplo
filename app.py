@@ -14,6 +14,7 @@ def get_db_connection():
     
     # on peut laisser cette ligne au cas où on voudrait se connecter à une bd locale
     #conn = psycopg2.connect(database="postgres", user="postgres", password="admin")
+    # use sql shell (psql) pour l'hoster local
 
     return conn
 
@@ -26,12 +27,6 @@ def get_db_connection():
 def index():
     return render_template('index.html')
 
-
-
-# Route : créer un compte
-@app.route("/compte")
-def creerCompte():
-    return render_template('creerCompte.html')
 
 # Route : Voir les livres que la bibliothèque contient
 @app.route("/bibliothèque")
