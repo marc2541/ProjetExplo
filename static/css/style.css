@@ -3,7 +3,7 @@ footer {
     left: 0;
     bottom: 0;
     position: fixed;
-    width: 100%;
+    width: 100%;font-size: small;
 }
 
 header {
@@ -26,4 +26,9 @@ a.active {
 
 #boutonFormulair {
     margin-top: 15px;
+}
+
+#accordionBibliotheque{
+    display:flexbox;
+    padding-bottom: 60px;
 }
